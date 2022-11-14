@@ -1,3 +1,4 @@
+import { AlertsService } from './services/alerts.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,9 +18,11 @@ import { SubscribeFormComponent } from './subscribe-form/subscribe-form.componen
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    AlertsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
